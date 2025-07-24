@@ -1,0 +1,17 @@
+﻿{
+  "title": "Winpot Fiesta Slots",
+  "googlePlay": "",
+  "appStore": "",
+  "screenshots": [
+    "BigCatch.png",
+    "CashSpins.png",
+    "CursedRelicts.png",
+    "FishFreenzy.png",
+    "NightTerror.png",
+    "MainMenu.png"
+  ],
+  "video": "playGame.mp4",
+  "apk": "WinspotFiestaSlots.apk",
+  "ipa": "",
+  "webgl": "index.html"
+}
