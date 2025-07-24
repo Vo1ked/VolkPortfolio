@@ -125,19 +125,26 @@ async function loadProjects() {
                 const screenshotsHTML = data.screenshots.map(file => `<img src=\"projects/${folder}/${file}\" alt=\"screenshot\">`).join('');
 
                 section.innerHTML = `
-          <h2 class=\"project-title\">${data.title}</h2>
+          
           ${storeHTML}
           <div class=\"media\">
-            ${screenshotsHTML}
+            <div class="video-container">
             <video controls preload=\"metadata\">
               <source src=\"projects/${folder}/${data.video}\" type=\"video/mp4\">
             </video>
+            </div>
+            <div class="media-blocks">
+                <h2 class=\"project-title\">${data.title}</h2>
+                <p>${data.description}</p>
+                <div class="images">${screenshotsHTML}</div>
+                <div class=\"downloads\">
+                    ${data.apk ? `<a href=\"projects/${folder}/${data.apk}\" download>📱 Download APK</a>` : ""}
+                    ${data.ipa ? `<a href=\"projects/${folder}/${data.ipa}\" download>🍏 Download IPA</a>` : ""}
+                    ${data.webgl ? `<a href=\"projects/${folder}/${data.webgl}\" target=\"_blank\">🎮 Play in Browser</a>` : ""}
+                </div>
+            </div>
           </div>
-          <div class=\"downloads\">
-            ${data.apk ? `<a href=\"projects/${folder}/${data.apk}\" download>📱 Download APK</a>` : ""}
-            ${data.ipa ? `<a href=\"projects/${folder}/${data.ipa}\" download>🍏 Download IPA</a>` : ""}
-            ${data.webgl ? `<a href=\"projects/${folder}/${data.webgl}\" target=\"_blank\">🎮 Play in Browser</a>` : ""}
-          </div>
+          
         `;
 
                 container.appendChild(section);
