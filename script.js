@@ -1,6 +1,6 @@
 ﻿const resumes = {
     en: "https://docs.google.com/document/d/ENGLISH_RESUME_ID",
-    uk: "https://docs.google.com/document/d/UKRAINIAN_RESUME_ID",
+    ua: "https://docs.google.com/document/d/UKRAINIAN_RESUME_ID",
     ru: "https://docs.google.com/document/d/RUSSIAN_RESUME_ID"
 };
 
