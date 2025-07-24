@@ -1,7 +1,7 @@
 ﻿const resumes = {
-    en: "https://docs.google.com/document/d/1rRv0lGzyzGsvIj3pzuihyNNVE2whi2c1zsgfa5I6Alc/edit?usp=sharing",
-    uk: "https://docs.google.com/document/d/1TlJ2IJdSHs451h7sI6WYAvkaLwcRPZlNNyR4zilRiVc/edit?usp=sharing",
-    ru: "https://docs.google.com/document/d/1kO0MpPcMlh27GoCWPtECDTBCV0rwQutjqRSIkOLcPcM/edit?usp=sharing"
+    en: "https://docs.google.com/document/d/ENGLISH_RESUME_ID",
+    uk: "https://docs.google.com/document/d/UKRAINIAN_RESUME_ID",
+    ru: "https://docs.google.com/document/d/RUSSIAN_RESUME_ID"
 };
 
 const localization = {
@@ -46,6 +46,60 @@ document.querySelectorAll(".language-switcher button").forEach(btn => {
     });
 });
 
+function enableImagePopup(images, currentIndex = 0) {
+    const full = document.createElement("div");
+    full.className = "image-popup";
+
+    full.innerHTML = `
+    <div class="wrapper">
+      <img src="${images[currentIndex].src}" />
+      <span class='close'>&times;</span>
+      <span class='arrow left'>&larr;</span>
+      <span class='arrow right'>&rarr;</span>
+    </div>
+  `;
+    document.body.appendChild(full);
+
+    const imgEl = full.querySelector("img");
+    const updateImage = () => (imgEl.src = images[currentIndex].src);
+
+    function closePopup() {
+        full.remove();
+        document.removeEventListener("keydown", escListener);
+    }
+
+    const escListener = (e) => {
+        if (e.key === "Escape") closePopup();
+        if (e.key === "ArrowLeft") prev();
+        if (e.key === "ArrowRight") next();
+    };
+
+    const prev = () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    };
+
+    const next = () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    };
+
+    full.querySelector(".close").addEventListener("click", closePopup);
+    full.addEventListener("click", (e) => {
+        if (e.target === full) closePopup();
+    });
+    full.querySelector(".arrow.left").addEventListener("click", (e) => {
+        e.stopPropagation();
+        prev();
+    });
+    full.querySelector(".arrow.right").addEventListener("click", (e) => {
+        e.stopPropagation();
+        next();
+    });
+
+    document.addEventListener("keydown", escListener);
+}
+
 async function loadProjects() {
     const container = document.getElementById("projects");
     const lang = currentLang;
@@ -75,7 +129,7 @@ async function loadProjects() {
           ${storeHTML}
           <div class=\"media\">
             ${screenshotsHTML}
-            <video controls>
+            <video controls preload=\"metadata\">
               <source src=\"projects/${folder}/${data.video}\" type=\"video/mp4\">
             </video>
           </div>
@@ -87,6 +141,13 @@ async function loadProjects() {
         `;
 
                 container.appendChild(section);
+
+                const imgs = Array.from(section.querySelectorAll(".media img"));
+                imgs.forEach((img, idx) => {
+                    img.classList.add("clickable-thumbnail");
+                    img.addEventListener("click", () => enableImagePopup(imgs, idx));
+                });
+
             } catch (e) {
                 console.warn(`Can't load project ${folder} in lang ${lang}`);
             }
