@@ -1,0 +1,14 @@
+﻿{
+  "title": "Sky City",
+  "googlePlay": "",
+  "appStore": "",
+  "screenshots": [
+    "screen1.webp",
+    "screen2.webp",
+    "screen3.webp"
+  ],
+  "video": "gameplay.mp4",
+  "apk": "slot.apk",
+  "ipa": "",
+  "webgl": "index.html"
+}
