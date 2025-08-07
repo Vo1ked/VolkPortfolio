@@ -171,21 +171,21 @@ async function loadProjects() {
         // Ссылки на загрузку
         const downloads = clone.querySelector(".downloads");
         if (data.apk) {
-            const apk = document.createElement("apk");
+            const apk = document.createElement("a");
             apk.href = `projects/${folder}/${data.apk}`;
             apk.download = "";
             apk.textContent = "📱 Download APK";
             downloads.append(apk);
         }
         if (data.ipa) {
-            const ipa = document.createElement("ipa");
+            const ipa = document.createElement("a");
             ipa.href = `projects/${folder}/${data.ipa}`;
             ipa.download = "";
             ipa.textContent = "🍏 Download IPA";
             downloads.append(ipa);
         }
         if (data.webgl) {
-            const webgl = document.createElement("webgl");
+            const webgl = document.createElement("a");
             webgl.href = `projects/${folder}/${data.webgl}`;
             webgl.target = "_blank";
             webgl.textContent = "🎮 Play in Browser";
@@ -193,7 +193,7 @@ async function loadProjects() {
         }
         if (Array.isArray(data.code) && data.code.length) {
             data.code.forEach(fileName => {
-            const code = document.createElement("code");
+            const code = document.createElement("a");
             code.href = `projects/${folder}/${fileName}`;
             code.download = "";
             code.textContent = `📦 {fileName} Code`;
