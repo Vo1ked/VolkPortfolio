@@ -171,27 +171,35 @@ async function loadProjects() {
         // Ссылки на загрузку
         const downloads = clone.querySelector(".downloads");
         if (data.apk) {
-            const a = document.createElement("a");
-            a.href = `projects/${folder}/${data.apk}`;
-            a.download = "";
-            a.textContent = "📱 Download APK";
-            downloads.append(a);
+            const apk = document.createElement("apk");
+            apk.href = `projects/${folder}/${data.apk}`;
+            apk.download = "";
+            apk.textContent = "📱 Download APK";
+            downloads.append(apk);
         }
         if (data.ipa) {
-            const a = document.createElement("a");
-            a.href = `projects/${folder}/${data.ipa}`;
-            a.download = "";
-            a.textContent = "🍏 Download IPA";
-            downloads.append(a);
+            const ipa = document.createElement("ipa");
+            ipa.href = `projects/${folder}/${data.ipa}`;
+            ipa.download = "";
+            ipa.textContent = "🍏 Download IPA";
+            downloads.append(ipa);
         }
         if (data.webgl) {
-            const a = document.createElement("a");
-            a.href = `projects/${folder}/${data.webgl}`;
-            a.target = "_blank";
-            a.textContent = "🎮 Play in Browser";
-            downloads.append(a);
+            const webgl = document.createElement("webgl");
+            webgl.href = `projects/${folder}/${data.webgl}`;
+            webgl.target = "_blank";
+            webgl.textContent = "🎮 Play in Browser";
+            downloads.append(webgl);
         }
-
+        if (Array.isArray(data.code) && data.code.length) {
+            data.code.forEach(fileName => {
+            const code = document.createElement("code");
+            code.href = `projects/${folder}/${fileName}`;
+            code.download = "";
+            code.textContent = `📦 {fileName} Code`;
+            downloads.append(code);
+            })
+        }
         container.appendChild(clone);
     }
 }
