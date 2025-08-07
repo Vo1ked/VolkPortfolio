@@ -1,0 +1,15 @@
+{
+    "name": "Fort-OxAnimalKingdom",
+    "short_name": "Fort-OxAnimalKingdom",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#FFFFFF",
+    "theme_color": "#000",
+    "description": "Fort-OxAnimalKingdom",
+    "icons": [{
+      "src": "TemplateData/icons/unity-logo-dark.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }

@@ -1,0 +1,19 @@
+﻿{
+  "title": "Fort-Ox Animal Kindom",
+  "googlePlay": "",
+  "appStore": "",
+  "screenshots": [
+    "BallDash.webp",
+    "Bird.webp",
+    "LevelSelect.webp",
+    "LosePopup.webp",
+    "Match3.webp",
+    "Tutorial.webp",
+    "WinPopup.webp",
+    "Memorize.webp"
+  ],
+  "video": "gameplay.mp4",
+  "apk": "Fort-OxAnimalKindom.apk",
+  "ipa": "",
+  "webgl": "index.html"
+}
