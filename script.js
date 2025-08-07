@@ -8,7 +8,7 @@ const localization = {
     en: {
         name: "Volodymyr Sannikov — Unity Developer",
         description: "This portfolio includes only non-NDA projects, which constitute the majority, and all were completed within the past year. Each project can be played in the browser or downloaded for Android, and portions of the source code are also available for review and download.",
-        resume: "📄 Open Resume",
+        resume: "📄 Open CV",
         footer: "🔧 Found a bug? Write to"
     },
     ua: {
