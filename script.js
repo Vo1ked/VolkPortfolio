@@ -196,7 +196,7 @@ async function loadProjects() {
             const code = document.createElement("a");
             code.href = `projects/${folder}/${fileName}`;
             code.download = "";
-            code.textContent = `📦 {fileName} Code`;
+            code.textContent = `📦 ${fileName} Code`;
             downloads.append(code);
             })
         }
