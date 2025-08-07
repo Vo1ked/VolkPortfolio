@@ -186,7 +186,7 @@ async function loadProjects() {
         }
         if (data.webgl) {
             const a = document.createElement("a");
-            a.href = data.webgl;
+            a.href = `projects/${folder}/${data.webgl}`;
             a.target = "_blank";
             a.textContent = "🎮 Play in Browser";
             downloads.append(a);
