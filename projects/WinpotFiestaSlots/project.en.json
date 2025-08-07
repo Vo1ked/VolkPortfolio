@@ -14,5 +14,8 @@
   "apk": "WinspotFiestaSlots.apk",
   "ipa": "",
   "webgl": "index.html",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  "code" : [
+    "VolkSlot.zip"
+  ],
+  "description": "This application features multiple slot game variants with different grid sizes. A reel hold mechanic with validation when all paylines are locked has been implemented, and a daily bonus collection window is also provided."
 }

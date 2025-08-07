@@ -13,7 +13,14 @@
     "Memorize.webp"
   ],
   "video": "gameplay.mp4",
-  "apk": "WinspotFiestaSlots.apk",
+  "apk": "Fort-OxAnimalKindom.apk",
   "ipa": "",
-  "webgl": "index.html"
+  "webgl": "index.html",
+  "code" : [
+    "VolkMatch3.zip",
+    "VolkBird.zip",
+    "VolkBallDash.zip",
+    "VolkMemorize.zip"
+  ],
+  "description": "В данном приложении объединены четыре игры: Math3, аналог Flappy Bird, «Запоминание последовательности» и «Рисование пути». Во всех играх реализована система уровней: в трёх из четырёх уровни генерируются автоматически и являются уникальными для каждого пользователя, для четвёртой игры предусмотрен редактор уровней. Также во всех проектах доступны таймер и функция паузы."
 }
