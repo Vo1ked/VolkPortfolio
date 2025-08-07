@@ -2,7 +2,6 @@ const cacheName = "Volk-Fort-OxAnimalKingdom-1.0.1";
 const contentToCache = [
     "Build/Web.loader.js",
     "Build/Web.framework.js",
-    "Build/Web.worker.js",
     "Build/Web.data",
     "Build/Web.wasm",
     "TemplateData/style.css"

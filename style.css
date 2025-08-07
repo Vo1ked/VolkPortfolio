@@ -250,3 +250,9 @@ footer a {
     display: flex;
     flex: 3;
 }
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0.5rem 0 1rem;
+}

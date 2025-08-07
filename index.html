@@ -11,6 +11,7 @@
 <header>
     <div class="top-bar">
         <h1 id="name-title">Volodymyr Sannikov — Unity Developer</h1>
+        <h2 id="subtitle" class="subtitle"></h2>
         <div class="language-switcher">
             <button data-lang="en"><img src="assets/flags/en.svg" alt="EN" /></button>
             <button data-lang="ua"><img src="assets/flags/ua.svg" alt="UA" /></button>
@@ -19,7 +20,24 @@
           <button id="resume-button">📄 Open Resume</button>
       </div>
   </header>
-  
+<template id="project-template">
+    <section class="project">
+        <div class="store-links"></div>
+        <div class="media">
+            <div class="video-container">
+                <video controls preload="metadata">
+                    <source />
+                </video>
+            </div>
+            <div class="media-blocks">
+                <h2 class="project-title"></h2>
+                <p class="project-description"></p>
+                <div class="images"></div>
+                <div class="downloads"></div>
+            </div>
+        </div>
+    </section>
+</template>
   <main id="projects"></main>
   
   <footer>
