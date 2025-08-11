@@ -1,0 +1,20 @@
+﻿{
+  "title": "LiveAnimationsTest",
+  "googlePlay": "",
+  "appStore": "",
+  "screenshots": [
+    "CharacterSelect.webp",
+    "Game.webp",
+    "Language.webp",
+    "Main.webp"
+  ],
+  "video": "GamePlay.mp4",
+  "apk": "LifeAnimation.apk",
+  "ipa": "",
+  "webgl": "index.html",
+  "code" : [
+    "VolkArkanoid.zip",
+    "VolkCharacters.zip"
+  ],
+  "description": "Цей застосунок було розроблено як тестове завдання протягом трьох днів. Завдання полягало у створенні гри в стилі Arkanoid з головним меню та основним геймплеєм; додатково реалізовано локалізацію."
+}
